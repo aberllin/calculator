@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background: #ececec;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-column-gap: 7px;
+    grid-row-gap: 7px;
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 70px);
+}
+
+button {
+    outline: none;
+    font-weight: normal;
+    font-size: 14pt;
+    display: 15pt;
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+    border: 2px solid #ececec;
+    cursor: pointer;
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 
+    10px 10px 15px rgba(70, 70, 70, 0.12);
+}
+
+.eql-btn, .clear-btn {
+    grid-column: span 2;
+}
+
+i {
+    font-size: 10pt;
+}
+
+.dot {
+    font-size: 25pt;
+}
+
+
+
+button:focus {
+    color: rgb(152, 82, 167);
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 
+    10px 10px 15px rgba(70, 70, 70, 0.12),
+    inset -10px -10px 15px rgba(255, 255, 255, 0.5), 
+    inset 10px 10px 15px rgba(70, 70, 70, 0.12);
+}
+
+.output {
+    grid-column: 1 / -1;
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 
+    10px 10px 15px rgba(70, 70, 70, 0.12);
+    border-radius: 50px;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
